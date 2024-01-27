@@ -1,42 +1,42 @@
-名字: CodeQL
+name: CodeQL
 
-在:
-推:
-分支: [主要的]
-拉取请求:
-分支: [主要的]
-日程安排:
-    - 时间单位: '38 1 * * 2'
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '38 1 * * 2'
 
-工作:
-分析:
-名字: 分析
-连续运行: Ubuntu-最新版
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
 
-战略:
-矩阵:
-语言: [‘斯威夫特’, '']
+    strategy:
+      matrix:
+        language: ['swift', '']
 
-步伐:
-      - 名字: 签出存储库
-使用: 动作/签出@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - 名字: 初始化CodeQL
-使用: github/codeql-action/init@v3
-随着:
-语言: ${{矩阵。语言}}
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
 
-      - 名字: 自动构建
-使用: github/codeql-action/autobuild @ v3
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
 
-      #如果自动构建失败，取消对以下行的注释
-      # -名称:手动构建
-      #跑步:
-      # #您的构建命令在此处
+      # Uncomment the following lines if Autobuild fails
+      # - name: Manual Build
+      #   run: |
+      #     # Your build commands here
 
-      - 名字: 运行CodeQL分析
-使用: github/codeql-action/analyze @ v3
+      - name: Run CodeQL analysis
+        uses: github/codeql-action/analyze@v3
 
-        #如果需要，取消注释并自定义查询
-        #使用:
-        #查询:安全性扩展、安全性和质量
+        # Uncomment and customize the queries if needed
+        # with:
+        #   queries: security-extended,security-and-quality
