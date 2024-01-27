@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-< meta name = " viewport " content = " width = device-width，initial-scale=1.0 " ><meta name="viewport" content="width=device-width, initial-scale=1.0">
-《link rel =“style sheet“href =“styles . CSS“》<link 能量损耗率=“样式表“ href=“styles.css“>
-《script src =“script . js“defer》《/ script》<script 科学研究委员会=“脚本。js“ 推迟></script>
-《title》粘性标题示例<title>Sticky Header Example</title>
-</</head >>
+<!文档类型html >
+<超文本标记语言语言=“恩”>
+<头>
+  <自指的字符集=“UTF八号”>
+<自指的名字 = “视口“ 内容 = 宽度=设备宽度，初始比例=1.0 ><自指的名字="视窗" 内容=宽度=设备宽度，初始比例=1.0>
+《link rel =“样式表“href =“样式。CSS“》<环能量损耗率=“样式表“ href=“styles.css“>
+《脚本src =》脚本。js《推迟》《/脚本》<脚本科学研究委员会="脚本js“ 推迟></脚本>
+《标题》粘性标题示例<标题>粘性标题示例</标题>
+</</头>>
 <<正文>>
-《header id =“sticky-header“》<header 身份证明(识别)=“粘性标题”>
-《h1》您的粘性标题《/h1》<h1>Your Sticky Header</h1>
-</header ></header>
+《header id =“sticky-header“》<页眉身份证明(识别)=“粘性标题”>
+《h1》您的粘性标题《/h1》<氕>你的粘性标题</氕>
+</页眉></页眉>
 <!-您的其他内容放在这里-》<!-您的其他内容放在这里-》
-</</body >>
-</</html >>
+</</身体>>
+</</超文本标记语言>>
